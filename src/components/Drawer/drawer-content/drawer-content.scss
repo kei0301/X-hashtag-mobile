@@ -1,0 +1,189 @@
+.dapp-sidebar {
+  height: 100vh;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  .branding-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 30px 0 63px 0;
+
+    .wallet-link {
+      margin: 10px;
+
+      p {
+        font-family: Averta SemiBold;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .dapp-menu-links {
+    display: flex;
+    align-items: center;
+
+    .dapp-nav {
+      display: flex;
+      flex-flow: column;
+
+      a {
+        margin-top: 10px;
+        margin-left: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+        .selected-badge {
+          width: 10px;
+          height: 40px;
+          float: left;
+          margin-left: -10px;
+          margin-right: 10px;
+          background: transparent;
+        }
+        &.active {
+          .selected-badge {
+            background: linear-gradient(358deg, #4861c9 4.32%, #892cbd 97.46%);
+          }
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          vertical-align: -4px;
+        }
+      }
+
+      .button-dapp-menu {
+        .dapp-menu-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 10px;
+
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #ffffff;
+            font-family: Averta SemiBold;
+          }
+        }
+      }
+
+      .button-dapp-menu.active {
+        .dapp-menu-item {
+          p {
+            // text-decoration: underline;
+          }
+        }
+      }
+
+      .bond-discounts {
+        text-align: left;
+        padding-left: 54px;
+
+        a {
+          margin-left: 0;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-family: Averta;
+          font-size: 14px;
+          line-height: 17px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        .bond {
+          display: block;
+          padding: unset;
+          margin-bottom: 0 0 1px 0;
+          text-decoration: none !important;
+          .bond-pair-roi {
+            float: right;
+            margin-left: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  .dapp-menu-doc-link {
+    margin-top: auto;
+
+    a {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      p {
+        font-family: Averta SemiBold;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .social-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    padding: 1.3rem;
+    a {
+      &:hover {
+        transform: scale(1.1);
+      }
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+.MuiDrawer-root {
+  .MuiPaper-root {
+    z-index: 7;
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      // background: rgba(36, 39, 41, 0.1);
+      backdrop-filter: blur(40px);
+
+      background: #08052e;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      // background: #181B1C;
+
+      backdrop-filter: blur(40px);
+
+      background: #08052e;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.MuiTooltip-popper {
+  padding: 0 !important;
+  div {
+    background: transparent !important;
+    border: solid 1px #ffffff !important;
+  }
+}

@@ -1,0 +1,142 @@
+.zapin-poper {
+    max-width: 803px !important;
+    min-height: 605px;
+    width: 100%;
+
+    .zapin-header {
+        margin-top: 47px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .zapin-header-token-select-wrap {
+            margin: 0 auto 20px auto;
+            max-width: 400px;
+
+            .zapin-header-token-select-title{
+                font-family: Averta;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                color: #FFFFFF;
+                margin-bottom: 4px;
+                margin-left: 10px;
+            }
+
+            .zapin-header-token-select-input {
+                width: 100%;
+                margin-bottom: 30px;
+
+                background: none;
+                border: 1px solid;
+                border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%) !important;
+                border-radius: inherit !important;;
+                outline: none;
+
+                // background: rgba(255, 255, 255, 0.2);
+                // border: 1px solid rgba(255, 255, 255, 0.2);
+                // border-radius: 6px;
+                // outline: none;
+
+                .MuiOutlinedInput-input {
+                    font-family: Averta Medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.6);
+                    padding: 14px 20px;
+                }
+
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: rgba(255, 255, 255, 0.2) !important;
+                }
+
+                .zapin-header-token-select-input-btn {
+                    cursor: pointer;
+
+                    p {
+                        font-family: Averta SemiBold;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .zapin-header-token-select-input-token-select{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    cursor: pointer;
+
+                    p{
+                        margin-left: 10px;
+                        margin-right: 5px;
+
+                        font-family: Averta Medium;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+
+                    .zapin-header-token-select-input-token-select-logo{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 24px;
+                        box-shadow: rgb(0 0 0 / 8%) 0px 6px 10px;
+                    }
+                }
+            }
+
+            .zapin-header-token-select-btn {
+                padding: 14px;
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+                border-radius: 6px;
+                cursor: pointer;
+
+                p {
+                    font-family: Averta;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .zapin-header-help-text {
+            p {
+                font-family: Averta Light;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+    
+    .zapin-body {
+        margin-top: 24px;
+
+        .zapin-body-header{
+            display: flex;
+            align-items: center;
+
+            p{
+                margin-left: 10px;
+                font-family: Averta SemiBold;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                color: #FFFFFF;
+            }
+        }
+
+        .zapin-body-params{
+            margin-top: 20px;
+        }
+    }
+}

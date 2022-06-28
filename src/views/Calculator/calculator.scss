@@ -1,0 +1,318 @@
+.calculator-view {
+    width: 89%;
+    max-width: 833px;
+    margin: auto;
+
+    .calculator-card {
+        position: relative;
+        z-index: 2;
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            // background: rgba(36, 39, 41, 0.1);
+            // backdrop-filter: blur(40px);
+
+            // background: #00012A;
+            backdrop-filter: blur(5em);
+            // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,255,255,0.0718662464985994) 0%, rgba(0,1,42,1) 47%);
+            border: 1px solid #291175;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+        }
+
+        /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+        @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            // background: #181B1C;
+
+            // background: #00012A;
+            backdrop-filter: blur(5em);
+            border: 1px solid #291175;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+        }
+
+        border-radius: 6px;
+        padding: 20px;
+        width: 100%;
+
+        .calculator-card-grid {
+            margin: 0;
+            width: 100%;
+        }
+
+        .calculator-card-header {
+            .calculator-card-header-title {
+                font-family: Averta Bold;
+                font-weight: bold;
+                font-size: 20px;
+                color: #FFFFFF;
+                margin-bottom: 4px;
+            }
+
+            .calculator-card-header-subtitle {
+                font-family: Averta SemiBold;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+            }
+        }
+
+        .calculator-card-metrics {
+            display: flex;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            margin-top: 10px;
+
+            .calculator-card-apy,
+            .calculator-card-tvl,
+            .calculator-card-index {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                .calculator-card-metrics-title {
+                    font-family: Averta Medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: rgba(255, 255, 255, 0.6);
+                    margin-bottom: 2px;
+                }
+
+                .calculator-card-metrics-value {
+                    font-family: Averta Bold;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .calculator-card-area {
+            .calculator-card-wallet-notification {
+                text-align: center;
+
+                .calculator-card-wallet-connect-btn {
+                    background: rgba(255, 255, 255, 0.2);
+                    box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+                    border-radius: 6px;
+                    padding: 14px 58px;
+                    cursor: pointer;
+                    margin: auto;
+                    max-width: 280px;
+                    margin-top: 20px;
+
+                    p {
+                        font-family: Averta SemiBold;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .calculator-card-wallet-desc-text {
+                    font-family: Averta Light;
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.6);
+                    margin-top: 10px;
+                    margin-bottom: 6px;
+                }
+            }
+
+            .calculator-card-action-area {
+                width: 100%;
+                margin-top: 25px;
+
+                .calculator-card-action-area-inp-wrap{
+                    position: relative;
+                    .left-border-div {
+                        position: absolute;
+                        height: calc(100% - 25px);
+                        left: 0;
+                        bottom: 0px;
+                        padding: 0.5px;
+                        border: solid 1px #4861C9;
+                        width: 20px;
+                        border-top-left-radius: 10px;
+                        border-right: 0;
+                        border-bottom-left-radius: 10px;
+                    }
+                    .right-border-div {
+                        position: absolute;
+                        height: calc(100% - 25px);
+                        right: 0;
+                        bottom: 0px;
+                        padding: 0.5px;
+                        border: solid 1px #892CBD;
+                        width: 20px;
+                        border-top-right-radius: 10px;
+                        border-left: 0;
+                        border-bottom-right-radius: 10px;
+                    }
+                    .vertical-border-wrapper {
+                        padding: 0 20px;
+                        .top-border-div {
+                            padding: 0.5px 20px;
+                            background: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%) !important;
+                        }
+                        .bottom-border-div {
+                            padding: 0.5px;
+                            background: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%) !important;
+                        }
+                    }
+                    .calculator-card-action-area-inp-wrap-title{
+                        font-family: Averta Medium;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        margin-bottom: 5px;
+                        margin-left: 10px;
+                    }
+
+                    .calculator-card-action-input{
+                        width: 100%;
+        
+                        background: none;
+                        // border: 1px solid;
+                        // border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%) !important;
+
+                        border-radius: inherit !important;;
+                        outline: none;
+                        
+                        .MuiOutlinedInput-input{
+                          font-family: Averta Medium;
+                          font-style: normal;
+                          font-weight: 500;
+                          font-size: 16px;
+                          color: rgba(255, 255, 255, 0.6);
+                          padding: 14px 20px;
+                        }
+                        
+                        .MuiOutlinedInput-notchedOutline{
+                        //   border-color: rgba(255, 255, 255, 0.2) !important;
+                            // border-image-slice: 1;
+                            // border-width: 1px;
+                            border: none !important;
+                            // border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%);
+                        }
+                        
+                        .stake-card-action-input-btn{
+                          cursor: pointer;
+                            
+                          p{
+                            font-family: Averta SemiBold;
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: #FFFFFF;
+                          }
+                        }
+                      } 
+                }
+            }
+
+            .calculator-days-slider-wrap{
+                margin-top: 30px;
+
+                .calculator-days-slider-wrap-title{
+                    font-family: Averta Medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    margin-bottom: 10px;
+                }
+
+                .calculator-days-slider{
+                    .MuiSlider-rail, .MuiSlider-track{
+                        height: 10px;
+                    }
+
+                    .MuiSlider-rail{
+                        background: none;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                        border-radius:16px;
+                        border: 1px solid #563acb;
+
+                        // background: linear-gradient(92.38deg, #4261CB 8%, #9B1CBA 97.51%);
+                        border-radius: 22px;
+                        // border-image-slice: 1;
+                        // border-width: 1px;
+                        // border-radius: inherit !important;
+                        // border-image-source: linear-gradient(123.25deg, #3471CD -3.97%, #9C1CB9 93.65%);
+                    }
+
+                    .MuiSlider-track{
+                        // border-top-left-radius: 10px;
+                        // border-bottom-left-radius: 10px;
+                        border-radius: 22px;
+                        background: linear-gradient(92.38deg, #4261CB 8%, #9B1CBA 97.51%);
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .MuiSlider-thumb{
+                        width: 20px;
+                        height: 20px;
+                        background: #232323;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                        border: 2px solid #9B1CBA;
+                    }
+                }
+            }
+
+            .calculator-user-data {
+                justify-content: center;
+                margin: auto;
+                padding: 0 5px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .calculator-view {
+        .calculator-card {
+            .calculator-card-metrics {
+
+                .calculator-card-apy,
+                .calculator-card-tvl,
+                .calculator-card-index {
+                    align-items: flex-start;
+                }
+
+                .calculator-card {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+
+            .calculator-card-area {
+                .calculator-card-action-area {
+                    .calculator-card-action-row {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .calculator-view {
+        width: 100%;
+    }
+}

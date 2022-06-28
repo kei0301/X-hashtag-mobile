@@ -1,0 +1,81 @@
+.time-menu-root{
+  .time-menu-btn{
+    padding: 9px 20px;
+    background: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 20px;
+
+    p{
+      font-family: Averta SemiBold;
+      font-weight: 500;
+      font-size: 18px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.time-menu-popper{
+  margin-top: 10px;
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(100px);
+  }
+
+  /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      background: #181B1C;
+  }
+
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+
+  .tooltip{
+    display: flex;
+    flex-direction: column;
+
+    .tooltip-item{
+      text-decoration: none;
+      padding: 13px 20px;
+      cursor: pointer;
+
+      &:hover{
+          background: rgba(255,255,255,0.1);
+      }
+
+      p{
+          font-family: Averta SemiBold;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #FFFFFF;
+          text-align: center;
+      }
+    }
+
+    .add-tokens{
+      display: flex;
+      flex-direction: column;
+
+      .add-tokens-title{
+        font-family: Averta SemiBold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+
+        margin: 5px 0px;
+      }
+    }
+
+    .divider{
+      height: 1px;
+      background: #FFFFFF;
+      border: none;
+    }
+  }
+}

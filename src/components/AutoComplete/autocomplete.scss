@@ -1,0 +1,13 @@
+.MuiFormLabel-root {
+    color: rgba(255, 255, 255, 0.521) !important;
+}
+
+label + .MuiInput-formControl {
+    color: white !important;
+}
+
+.MuiInput-underline:before,
+.MuiInput-underline:after,
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-color: white !important;
+}

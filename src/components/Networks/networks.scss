@@ -1,0 +1,40 @@
+.network-token-poper {
+    width: 100%;
+    background: #00012a !important;
+    // border: 1px solid #291175;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    padding: 20px;
+    border-radius: 16px !important;
+
+    .networks-list {
+        padding: 30px;
+        margin-left: -15px;
+    }
+
+    .network-cros-wrap {
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+    }
+    .network {
+        font-family: 'Averta SemiBold';
+        font-size: 20px;
+        color: white;
+        flex: 1;
+        padding: 35px;
+        align-self: center;
+        cursor: pointer;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+}

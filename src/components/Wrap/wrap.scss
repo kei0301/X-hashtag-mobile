@@ -1,0 +1,121 @@
+.wrap-token-poper{
+    width: 100%;
+    background: #00012A;
+    border: 1px solid #291175;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+
+    .wrap-cros-wrap{
+        align-items: center;
+        justify-content: space-between;
+
+        .wrap-price{
+            cursor: pointer;
+            p{
+                font-family: Averta SemiBold;
+                font-style: normal;
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .wrap-header-conteiner{
+        margin: 10px 30px 0 30px; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .wrap-header-title{
+            font-family: Averta SemiBold;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+
+        .wrap-header-balance{
+            font-family: Averta Medium;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    .wrap-container{
+        margin: 30px 30px 20px 30px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .wrap-input{
+            background-color: none;
+            margin: 0 !important;
+
+            .wrap-action-input-btn{
+                cursor: pointer;
+
+                p{
+                    font-family: Averta;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                }
+            }
+
+            .wrap-action-input-text{
+                font-family: Averta Medium;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        .wrap-toggle{
+            margin: 5px 0 5px 0;
+        }
+
+        .wrap-btn{
+            cursor: pointer;
+            margin-top: 20px;
+            // background: rgba(255, 255, 255, 0.2);
+            // box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+            // border-radius: 6px;
+            padding: 14px 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%);
+            box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.06);
+            border-radius: 6px;
+            
+            p{
+                font-family: Averta;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                color: #FFFFFF;
+            }
+        }
+
+        .wrap-help-text{
+            margin-top: 20px;
+
+            p{
+                font-family: Averta Light;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+}

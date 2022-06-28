@@ -1,0 +1,259 @@
+@import "../assets/styles/fonts.scss";
+@import "../assets/styles/mobile.scss";
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  font-family: Averta;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  // background: black;
+  background-image: url("../assets/icons/plainBG-min.png");
+  // background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  /* background-size: cover; */
+  // color: white;
+}
+
+iframe {
+  z-index: 0 !important;
+  top: -100000px !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+p {
+  margin: 0;
+}
+
+.web3modal-modal-lightbox {
+  z-index: 10 !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(100px) !important;
+
+  .web3modal-modal-card {
+    background: #181b1c;
+    backdrop-filter: blur(100px);
+    border-radius: 16px;
+
+    .web3modal-provider-wrapper {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0;
+      padding: 0;
+
+      .web3modal-provider-container {
+        background-color: rgb(0, 0, 0, 0);
+        border-radius: 0;
+
+        &:hover {
+          background-color: rgb(0, 0, 0, 0.2);
+        }
+
+        .web3modal-provider-name {
+          font-family: Averta SemiBold;
+          font-weight: 500;
+          font-size: 24px;
+          text-align: center;
+          color: #ffffff;
+        }
+
+        .web3modal-provider-description {
+          font-family: Averta Light;
+          font-weight: 300;
+          font-size: 14px;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.walletconnect-qrcode__base {
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    background: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(100px) !important;
+  }
+
+  /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .walletconnect-modal__base {
+    border-radius: 16px;
+    padding: 30px 20px 20px 20px;
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      background: #181b1c;
+      backdrop-filter: blur(100px);
+    }
+
+    /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      background: #181b1c;
+    }
+
+    .walletconnect-modal__header {
+      .walletconnect-modal__headerLogo {
+        display: none;
+      }
+
+      p {
+        margin-left: 24px;
+
+        font-family: Averta SemiBold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+      }
+
+      .walletconnect-modal__close__wrapper {
+        background: none;
+        right: 23px;
+
+        .walletconnect-modal__close__icon {
+          .walletconnect-modal__close__line1 {
+            border: 1px solid rgb(255, 255, 255);
+          }
+          .walletconnect-modal__close__line2 {
+            border: 1px solid rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+
+    .walletconnect-modal__mobile__toggle {
+      margin-bottom: 20px;
+      background: none;
+      width: 60%;
+
+      .walletconnect-modal__mobile__toggle_selector {
+        height: 1px;
+        background: #ffffff;
+        top: 34px;
+      }
+
+      a {
+        font-family: Averta SemiBold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:last-child {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+
+    .walletconnect-modal__mobile__toggle.right__selected {
+      a {
+        &:nth-child(2) {
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        &:last-child {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .walletconnect-qrcode__text {
+      font-family: Averta Light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .walletconnect-qrcode__image {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 13px;
+    }
+
+    .walletconnect-modal__footer {
+      font-family: Averta Light;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .walletconnect-modal__base__row {
+      h3 {
+        font-family: Averta SemiBold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.metamask-error-view {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  z-index: 69;
+
+  .vault-card {
+    max-width: 640px;
+    min-height: 250px;
+    backdrop-filter: blur(100px);
+    padding: 40px;
+    width: 100%;
+    color: white;
+
+    // background: #00012a;
+    backdrop-filter: blur(5em);
+    border: 1px solid #291175;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    .text-content {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+    .toolbar {
+      margin-top: 30px;
+      a {
+        background: linear-gradient(93.45deg, #4861c9 4.32%, #892cbd 97.46%);
+        box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+        border-radius: 6px;
+        padding: 9px 20px;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        width: 200px;
+        float: left;
+        margin-left: 10px;
+      }
+    }
+  }
+}

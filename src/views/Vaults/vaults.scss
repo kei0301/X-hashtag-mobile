@@ -1,0 +1,62 @@
+.MuiInput-underline:before {
+    border-color: white !important;
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom-color: white !important;
+}
+.MuiInputBase-root {
+    color: white !important;
+    width: 100%;
+    .MuiSelect-icon {
+        color: white !important;
+    }
+}
+.vaults-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    width: 89%;
+    max-width: 833px;
+    margin: auto;
+    .vaults-view-card {
+        border-radius: 6px;
+        padding: 20px;
+        width: 100%;
+
+        position: relative;
+        z-index: 2;
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            // background: rgba(36, 39, 41, 0.1);
+            backdrop-filter: blur(5em);
+
+            // background: #00012a;
+            border: 1px solid #291175;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+        }
+
+        /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+        @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            // background: #181b1c;
+        }
+
+        .filter {
+            color: white;
+        }
+    }
+    .vaults-wrapper {
+        width: 100%;
+        position: relative;
+        margin-top: 30px;
+        .MuiGrid-item {
+            margin: 0;
+            margin-top: 10px ;
+            margin-bottom: 10px;
+        }
+    }
+}

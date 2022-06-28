@@ -1,0 +1,49 @@
+@media only screen and (max-width: 600px) {
+    .vaults-view-card-metrics-value{
+        align-items: center !important;
+        padding-top:0px !important
+    }
+    .vaults-view-card-metrics-title{
+        text-align: center;
+    }
+    .token-icon-column{
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .MuiBackdrop-root{
+        overflow-y: overlay !important;
+    }
+    .vault-card{
+        position: relative;
+        top: 200px !important;
+    }
+
+    .top240{
+        position: relative;
+        top: 240px !important;
+    }
+
+    .vault-card-action-area-inp-wrap-title-new{
+        text-align: center !important;
+    }
+
+    .vault-view .withdraw-btn-wrapper{
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .withdraw-explain p{
+        padding-left: 0px !important;
+        text-align: center !important;
+    }
+
+    .vault-card-action-area-inp-wrap-title-div{
+        justify-content: center !important;
+    }
+
+    .vault-view .vault-card{
+        // padding-top: 140px !important;
+    }
+    .vaults-wrapper {
+        margin-top: 0px !important;
+    }
+}

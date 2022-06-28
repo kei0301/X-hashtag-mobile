@@ -1,0 +1,329 @@
+.stake-view{
+  width: 89%;
+  max-width: 833px;
+  margin: auto;
+
+  .stake-card{
+    position: relative;
+    z-index: 2;
+    
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      // background: rgba(36, 39, 41, 0.1);
+      // backdrop-filter: blur(40px);
+
+      // background: #00012A;
+      backdrop-filter: blur(5em);
+      border: 1px solid #291175;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+    }
+  
+    /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      // background: #181B1C;
+
+      // background: #00012A;
+      backdrop-filter: blur(5em);
+      border: 1px solid #291175;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+    }
+
+    border-radius: 6px;
+    padding: 20px;
+    width: 100%;
+
+    .stake-card-grid{
+      margin: 0;
+      width: 100%;
+    }
+
+    .stake-card-header{
+      .stake-card-header-title{
+        font-family: Averta Bold;
+        font-weight: bold;
+        font-size: 20px;
+        color: #FFFFFF;
+        margin-bottom: 4px;
+      }
+    }
+
+    .stake-card-metrics {
+      display: flex;
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      margin-top: 10px;
+      
+      .stake-card-apy,
+      .stake-card-tvl,
+      .stake-card-index {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .stake-card-metrics-title{
+          font-family: Averta Medium;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          color: rgba(255, 255, 255, 0.6);
+          margin-bottom: 2px;
+        }
+        
+        .stake-card-metrics-value{
+          font-family: Averta Bold;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .stake-card-area {
+      .stake-card-wallet-notification{
+        text-align: center;
+
+        .stake-card-wallet-connect-btn{
+          // background: rgba(255, 255, 255, 0.2);
+          // box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+          // border-radius: 6px;
+          padding: 14px 58px;
+          cursor: pointer;
+          margin: auto;
+          max-width: 280px;
+          margin-top: 20px;
+
+          background: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%);
+          box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.06);
+          border-radius: 6px;
+        
+          p{
+            font-family: Averta SemiBold;
+            font-weight: 500;
+            font-size: 18px;
+            color: #FFFFFF;
+          }
+        }
+
+        .stake-card-wallet-desc-text{
+          font-family: Averta Light;
+          font-weight: 300;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.6);
+          margin-top: 10px;
+          margin-bottom: 6px;
+        }
+      }
+
+      .stake-card-action-area{
+        width: 100%;
+        margin-top: 25px;
+
+        .stake-card-action-stage-btns-wrap{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .stake-card-action-stage-btn{
+            margin: 0px 30px;
+            padding: 6px;
+            cursor: pointer;
+            transition: all .4s ease;
+            
+            p{
+              font-family: Averta SemiBold;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.6);
+            }
+          }
+
+          .stake-card-action-stage-btn.active{
+
+            p{
+              color: #FFFFFF;
+            }
+
+            border-bottom: 1px solid #FFFFFF;;
+          }
+        }
+
+        .stake-card-action-row{
+          display: flex;
+          align-items: center;
+          margin-top: 20px;
+
+          .stake-card-action-input{
+            width: 100%;
+
+            // background: rgba(255, 255, 255, 0.2);
+            // border: 1px solid rgba(255, 255, 255, 0.2);
+            // border-radius: 6px;
+            // outline: none;
+
+            background: none;
+            border: 1px solid;
+            border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%) !important;
+            border-radius: inherit !important;;
+            outline: none;
+            
+            .MuiOutlinedInput-input{
+              font-family: Averta Medium;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              color: white; // rgba(255, 255, 255, 0.6);
+              padding: 14px 20px;
+            }
+            
+            .MuiOutlinedInput-notchedOutline{
+              // border-color: rgba(255, 255, 255, 0.2) !important;
+
+              border-image-slice: 1;
+              border-width: 1px;
+              border-radius: inherit !important;
+              border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%);
+    
+            }
+            
+            .stake-card-action-input-btn{
+              cursor: pointer;
+                
+              p{
+                font-family: Averta SemiBold;
+                font-weight: 500;
+                font-size: 18px;
+                color: #FFFFFF;
+              }
+            }
+          } 
+          
+          .stake-card-tab-panel{
+            min-width: 215px;
+            margin-left: 10px;
+
+            .stake-card-tab-panel-btn{
+              // background: rgba(255, 255, 255, 0.2);
+              // box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+              // border-radius: 6px;
+              padding: 14px 0px;
+              cursor: pointer;
+              text-align: center;
+
+
+              background: linear-gradient(106.06deg, #5D4CC7 3.79%, #8C29BE 96.9%);
+              box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.06);
+              border-radius: 6px;
+
+              &:hover{
+                border: 1px solid rgba(255, 255, 255, 0.6);
+              }
+          
+              p{
+                font-family: Averta SemiBold;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+
+        .stake-card-action-help-text{
+          margin-top: 10px;
+          
+          p{
+            font-family: Averta Light;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+
+      .stake-user-data{
+        justify-content: center;
+        margin: auto;
+        padding: 0 5px;
+        margin-top: 30px;
+        
+        
+      }
+    }
+  }
+}
+
+.data-row{
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0px;
+
+  .data-row-name{
+    font-family: Averta Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+  .data-row-value{
+    font-family: Averta;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stake-view{
+    .stake-card{
+      .stake-card-metrics{
+        .stake-card-apy,
+        .stake-card-tvl,
+        .stake-card-index {
+          align-items: flex-start;
+        }
+
+        .stake-card {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+
+      .stake-card-area{
+        .stake-card-action-area{
+          .stake-card-action-row{
+            flex-direction: column;
+            .stake-card-tab-panel{
+              margin-left: 0;
+              margin-top: 20px;
+              min-width: none;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .stake-view{
+    width: 100%;
+  }
+}

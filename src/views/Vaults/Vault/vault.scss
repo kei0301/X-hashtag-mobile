@@ -1,0 +1,318 @@
+.vault-view {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    z-index: 69;
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .MuiBackdrop-root {
+            // background: rgba(100, 100, 100, 0.1) !important;
+            background-image: url("../../../assets/icons/plainBG-min.png");
+            background-size: cover;
+            // background-repeat: cover;
+            // background-attachment: fixed;
+            backdrop-filter: blur(33px) !important;
+            -webkit-backdrop-filter: blur(33px) !important;
+        }
+    }
+
+    /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        .MuiBackdrop-root {
+            // background: rgba(0, 0, 0, 0.8);
+            background-image: url("../../../assets/icons/plainBG-min.png");
+            background-size: cover;
+            // background-repeat: cover;
+            // background-attachment: fixed;
+        }
+    }
+    .vault-card {
+        max-width: 833px;
+        min-height: 500px;
+        // background: #181B1C;
+        backdrop-filter: blur(100px);
+        // border-radius: 6px;
+        padding: 40px;
+        width: 100%;
+
+        // background: #00012a;
+        backdrop-filter: blur(5em);
+        border: 1px solid #291175;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+    }
+
+    .vaults-view-card-metrics {
+        margin: 10px 0;
+        border: 0;
+        border-bottom: 1px solid #291175;
+        padding-bottom: 20px;
+    }
+
+    .vault-card-action-area {
+        width: 100%;
+        margin-top: 25px;
+
+        .vault-card-action-area-inp-wrap {
+            position: relative;
+            .left-border-div {
+                position: absolute;
+                height: calc(100% - 25px);
+                left: 0;
+                bottom: 0px;
+                padding: 0.5px;
+                border: solid 1px #4861c9;
+                width: 20px;
+                border-top-left-radius: 10px;
+                border-right: 0;
+                border-bottom-left-radius: 10px;
+            }
+
+            .left-border-div-new {
+                position: absolute;
+                height: calc(100% - 35px);
+                left: 0;
+                bottom: 0px;
+                padding: 0.5px;
+                border: solid 1px #4861c9;
+                width: 20px;
+                border-top-left-radius: 10px;
+                border-right: 0;
+                border-bottom-left-radius: 10px;
+            }
+
+            .right-border-div {
+                position: absolute;
+                height: calc(100% - 25px);
+                right: 0;
+                bottom: 0px;
+                padding: 0.5px;
+                border: solid 1px #892cbd;
+                width: 20px;
+                border-top-right-radius: 10px;
+                border-left: 0;
+                border-bottom-right-radius: 10px;
+            }
+
+            .right-border-div-new {
+                position: absolute;
+                height: calc(100% - 35px);
+                right: 0;
+                bottom: 0px;
+                padding: 0.5px;
+                border: solid 1px #892cbd;
+                width: 20px;
+                border-top-right-radius: 10px;
+                border-left: 0;
+                border-bottom-right-radius: 10px;
+            }
+            .vertical-border-wrapper {
+                padding: 0 20px;
+                .top-border-div {
+                    padding: 0.5px 20px;
+                    background: linear-gradient(93.45deg, #4861c9 4.32%, #892cbd 97.46%) !important;
+                }
+                .bottom-border-div {
+                    padding: 0.5px;
+                    background: linear-gradient(93.45deg, #4861c9 4.32%, #892cbd 97.46%) !important;
+                }
+            }
+
+            .vault-card-action-area-inp-wrap-title-div {
+                display: flex;
+                justify-content: space-between;
+                padding-right: 10px;
+            }
+
+            .vault-card-action-area-inp-wrap-title {
+                font-family: Averta Medium;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                color: #ffffff;
+                margin-bottom: 5px;
+                margin-left: 10px;
+            }
+
+            .vault-card-action-area-inp-wrap-title-new {
+                font-family: Averta Medium;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                color: #ffffff;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                padding-bottom: 32px;
+            }
+
+            .vault-card-action-input {
+                width: 100%;
+
+                background: none;
+                // border: 1px solid;
+                // border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%) !important;
+
+                border-radius: inherit !important;
+                outline: none;
+
+                .MuiOutlinedInput-input {
+                    font-family: Averta Medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: white; //rgba(255, 255, 255, 0.6);
+                    padding: 12px 20px;
+                }
+
+                .MuiOutlinedInput-notchedOutline {
+                    //   border-color: rgba(255, 255, 255, 0.2) !important;
+                    // border-image-slice: 1;
+                    // border-width: 1px;
+                    border: none !important;
+                    // border-image-source: linear-gradient(93.45deg, #4861C9 4.32%, #892CBD 97.46%);
+                }
+
+                .stake-card-action-input-btn {
+                    cursor: pointer;
+
+                    p {
+                        font-family: Averta SemiBold;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    .deposit-btn-wrapper {
+        text-align: center;
+        .deposit {
+            display: inline-block;
+        }
+    }
+    .withdraw-btn-wrapper {
+        display: flex;
+
+        .withdraw {
+            flex: 1;
+            &:first-child {
+                margin-right: 10px;
+            }
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+    }
+    .deposit-explain {
+        p {
+            text-align: center;
+            color: white;
+        }
+        p:first-child {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+    }
+    .withdraw-explain {
+        display: flex;
+        justify-content: space-around;
+        font-size: 12px;
+        padding-top: 35px;
+        p {
+            color: white;
+            padding-left: 30px;
+        }
+        p:last-child {
+            padding-left: 50px;
+        }
+    }
+
+
+    .vault-modal-btn {
+        // background: rgba(255, 255, 255, 0.2);
+        // box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+        // border-radius: 6px;
+        padding: 12px 20px;
+        cursor: pointer;
+        text-align: center;
+
+        background: linear-gradient(106.06deg, #5d4cc7 3.79%, #8c29be 96.9%);
+        box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.06);
+        border-radius: 6px;
+
+        &:hover {
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        p {
+            font-family: Averta SemiBold;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        &.deposit {
+            width: 50%;
+        }
+    }
+
+    .vault-percent-slider-wrap {
+        .vault-percent-slider {
+            .MuiSlider-rail,
+            .MuiSlider-track {
+                height: 10px;
+            }
+
+            .MuiSlider-rail {
+                background: none;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 16px;
+                border: 1px solid #563acb;
+
+                // background: linear-gradient(92.38deg, #4261CB 8%, #9B1CBA 97.51%);
+                border-radius: 22px;
+                // border-image-slice: 1;
+                // border-width: 1px;
+                // border-radius: inherit !important;
+                // border-image-source: linear-gradient(123.25deg, #3471CD -3.97%, #9C1CB9 93.65%);
+            }
+
+            .MuiSlider-track {
+                // border-top-left-radius: 10px;
+                // border-bottom-left-radius: 10px;
+                border-radius: 22px;
+                background: linear-gradient(92.38deg, #4261cb 8%, #9b1cba 97.51%);
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .MuiSlider-thumb {
+                width: 20px;
+                height: 20px;
+                background: #232323;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                border: 2px solid #9b1cba;
+            }
+        }
+
+        .divided-percent {
+            display: flex;
+            margin-bottom: 10px;
+            .vault-percent-slider-wrap-title {
+                flex: 1;
+                font-family: Averta Medium;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                color: #ffffff;
+
+                &.end {
+                    flex: 0;
+                }
+            }
+        }
+    }
+}
